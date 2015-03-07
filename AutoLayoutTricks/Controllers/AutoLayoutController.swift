@@ -17,12 +17,12 @@ class AutoLayoutController: UIViewController {
 	
 	@IBAction func slider1Changed(sender: AnyObject) {
 		
-		constraint1.constant = (CGFloat)((sender as UISlider).value)
+		constraint1.constant = CGFloat((sender as UISlider).value)
 	}
 	
 	@IBAction func slider2Changed(sender: AnyObject) {
 		
-		constraint2.constant = (CGFloat)((sender as UISlider).value)
+		constraint2.constant = CGFloat((sender as UISlider).value)
 	}
 	
 	//MARK: view remove
@@ -43,7 +43,7 @@ class AutoLayoutController: UIViewController {
 		constraint1.constant = CGFloat(arc4random_uniform(200))
 		constraint2.constant = CGFloat(arc4random_uniform(200))
 		
-		UIView.animateWithDuration(0.5, animations: { () -> Void in
+		UIView.animateWithDuration(0.5, animations: {
 			self.view.setNeedsUpdateConstraints()
 			self.view.layoutIfNeeded()
 		})
