@@ -31,9 +31,7 @@ class AutoLayoutController: UIViewController {
 
 	@IBAction func removeView(sender: AnyObject) {
 		
-		if let view = removableView {
-			view.removeFromSuperview()
-		}
+		removableView.removeFromSuperview()
 	}
 	
 	//MARK: animating constraints
